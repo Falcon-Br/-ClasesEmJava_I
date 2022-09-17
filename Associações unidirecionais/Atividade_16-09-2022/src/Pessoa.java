@@ -44,7 +44,7 @@ public class Pessoa{
 
     void todosOsCarros(){
         for (Carro i : carros) {
-           System.out.println(i.getModelo());
+           System.out.println("* "+i.getModelo());
         }
     }
 }

@@ -15,8 +15,8 @@ public class App {
 
         //Mostra o Pai e mãe de Eduardo
         System.out.println("Os pais de "+pessoa1.getNome()+ " são: ");
-        System.out.println("Pai - "+pessoa1.getPai().getNome());
-        System.out.println("Mãe - "+pessoa1.getMae().getNome());
+        System.out.println("* Pai - "+pessoa1.getPai().getNome());
+        System.out.println("* Mãe - "+pessoa1.getMae().getNome());
         System.out.println();
 
         //Cria e configura 2 carros diferentes
@@ -29,6 +29,7 @@ public class App {
         carro2.setModelo("Honda");
         carro2.setDono(pessoa2);
 
+        //Mostra quais Carros Eduardo tem
         System.out.println(pessoa1.getNome()+" comprou os seguintes carros: ");
         pessoa1.comprarCarro(carro1);
         pessoa1.comprarCarro(carro2);
@@ -39,5 +40,16 @@ public class App {
         System.out.println(pessoa1.getNome()+" vendeu um carro. Agora ele tem os seguintes carros: ");
         pessoa1.venderCarro(carro2);
         pessoa1.todosOsCarros();
+
+        System.out.println();
+
+        //Mostra o dono atual e os donos passados
+        System.out.println("Lista de pessoas que já dirigiram o "+carro1.getModelo()+": ");
+        carro1.getListaDirigiu();
+
+        System.out.println();
+
+        System.out.println("Lista de pessoas que já dirigiram o "+carro2.getModelo()+": ");
+        carro1.getListaDirigiu();
     }
 }

@@ -15,7 +15,7 @@ public class Carro{
 
     void setDono(Pessoa dono){
         this.dono = dono;
-        listaDirigiu(dono.getNome());
+        setListaDirigiu(dono.getNome());
     }
 
     String getModelo(){
@@ -26,10 +26,16 @@ public class Carro{
         this.modelo = modelo;
     }
 
-    void listaDirigiu(String jaDirigiu){
+    void setListaDirigiu(String jaDirigiu){
         if(jaDirigiu !=  null){
-            this.jaDirigiu.add("jaDirigiu");
+            this.jaDirigiu.add(jaDirigiu);
         }
         
+    }
+
+    void getListaDirigiu(){
+        for (String i : jaDirigiu) {
+            System.out.println("* "+i);
+         }
     }
 }
